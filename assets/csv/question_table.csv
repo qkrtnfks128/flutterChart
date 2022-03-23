@@ -1,0 +1,24 @@
+INDEX,QUESTION_TITLE_KEY,QUESTION_TITLE,QUESTION_DESC_KEY,QUESTION_TEXT,VERSION
+1,question_1,"안녕하세요, FIET입니다.\n제가 어떻게 불러드릴까요?",question_1_text,최대 10자까지 입력 가능합니다.,2
+2,question_2,"님, 반가워요! \nFIET가 무엇을 도와드릴까요?",question_2_text,목적에 맞게 맞춤 프로그램을 제공하는데/n 활용됩니다.,1
+3,question_3,"님,\n키를 알려주세요.",question_3_text,체형 유형 분석에 활용됩니다.,2
+4,question_4,"님,\n몸무게를 알려주세요.",question_4_text,체형 유형 분석에 활용됩니다.,1
+5,question_5,"님,\n나이를 알려주세요.",question_5_text,체형 유형 분석에 활용됩니다.,2
+6,question_6,"님,\n성별을 알려주세요.",question_6_text,체형 유형 분석에 활용됩니다.,2
+7,question_7,"님,\n생리 주기를 알고 계신가요?",question_7_text,님의 컨디션에 맞게/n루틴을 제공하는데 활용됩니다.,2
+8,question_8,평균 생리 주기를 알려주세요.,question_8_text,님의 컨디션에 맞게/n루틴을 제공하는데 활용됩니다.,2
+9,question_9,마지막 생리시작일이\n언제인가요?,question_9_text,님의 컨디션에 맞게/n루틴을 제공하는데 활용됩니다.,1
+10,question_10,"님,\n하루 몇 끼의 식사를 하세요?",question_10_text,식습관 분석에 활용됩니다.,1
+11,question_11,"님,\n음식물 알레르기가 있으신가요?",question_11_text,"과자 등 색소 포함 음식, 갑각류 등",
+12,question_12,알레르기 종류를\n모두 선택해주세요.,question_12_text,,
+13,question_13,"님, \n평소에 운동을 하시나요?",question_13_text,라이프스타일에 맞는/n운동 프로그램을 제공하는데/n 활용됩니다.,
+14,question_14,최근 일주일동안\n운동은 얼마나 하셨나요?,question_14_text,라이프스타일에 맞는/n운동 프로그램을 제공하는데/n 활용됩니다.,
+15,question_15,하루 운동 시간이\n얼마나 되나요?,question_15_text,라이프스타일에 맞는/n운동 프로그램을 제공하는데/n 활용됩니다.,
+16,question_16,즐겨하는 운동 종류를\n알려주세요.,question_16_text,라이프스타일에 맞는/n운동 프로그램을 제공하는데/n 활용됩니다.,
+17,question_17,님의 평소 생활 모습을\n알려주세요.,question_17_text,라이프스타일에 맞게/n맞춤 루틴을 제공하는데 활용됩니다.,
+18,question_18,"일과 후, 님의\n남은 에너지는 어느 정도인가요?",question_18_text,라이프스타일에 맞게/n맞춤 루틴을 제공하는데 활용됩니다.,
+19,question_19,평소 마시는 물의 종류를\n알려주세요.,question_19_text,라이프스타일에 맞게/n맞춤 루틴을 제공하는데 활용됩니다.,
+20,question_20,하루 수면 시간을 알려주세요,question_20_text,라이프스타일에 맞게/n맞춤 루틴을 제공하는데 활용됩니다.,
+21,question_21,집중해서 관리하고 싶은 곳은\n어디인가요?,question_21_text,라이프스타일에 맞는/n운동 프로그램을 제공하는데/n 활용됩니다.,
+22,question_22,마지막 질문입니다!\nFIET가 꼭 알아야 할 게 있나요?,question_22_text,,
+23,question_23,FIET에게 알려주실 수 있나요?,question_23_text,,
