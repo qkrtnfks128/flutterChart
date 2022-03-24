@@ -1,5 +1,3 @@
-
-
 import 'package:csv/csv.dart';
 import 'package:drift/drift.dart';
 import 'package:fietmobile/data/survey/survey_database.dart';
@@ -7,15 +5,12 @@ import 'package:fietmobile/data/survey/survey_database.dart';
 import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 
-
-
 class CsvConvertor {
   CsvConvertor() {
     if (!GetIt.instance.isRegistered<SurveyDatabase>()) {
       GetIt.instance.registerSingleton<SurveyDatabase>(SurveyDatabase());
     }
   }
-
 
   Future loadAndInsertSystemTableCSV() async {
     final dao = GetIt.instance<SurveyDatabase>();
@@ -42,7 +37,8 @@ class CsvConvertor {
     int csvCategory = 0;
 
     List<List<dynamic>> data;
-    final rawData = await rootBundle.loadString("assets/csv/question_table.csv");
+    final rawData =
+        await rootBundle.loadString("assets/csv/question_table.csv");
     List<List<dynamic>> _listData = const CsvToListConverter().convert(rawData);
     data = _listData;
     for (var row = 1; row < data.length; row++) {

@@ -48,6 +48,7 @@ class SurveyCubit extends Cubit<SurveyState> {
       await dao.deleteAllData();
 
       CsvConvertor convertor = CsvConvertor();
+
       await convertor.loadAndInsertAnswerTableCSV();
       await convertor.loadAndInsertQuestionTableCSV();
       await convertor.loadAndInsertSystemTableCSV();
