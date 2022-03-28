@@ -4,5 +4,5 @@ import 'package:flutter/material.dart';
 
 var routes = <String, WidgetBuilder>{
   '/': (_) => const NavigatePage(),
-  '/evaluation':(_) =>const EvaluationPage()
+  '/evaluation': (_) => const EvaluationPage()
 };
