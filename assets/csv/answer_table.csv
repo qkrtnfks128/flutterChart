@@ -2,24 +2,27 @@ INDEX,ANSWER_KEY,ANSWER_VALUE,ANSWER_DESC,ANSWER_IMG_LINK,VERSION
 1,answer_1,,체중관리,http://...,1
 2,answer_2,,체형관리,http://...,
 3,answer_3,,생활체력관리,http://...,
-4,answer_4,"[145.0, 200.9, 163.5, 0.1,cm]",,http://...,
-5,answer_5,"[35.0, 150.9, 54.5, 0.1,kg]",,http://...,
-6,answer_6,"[15, 80, 23, 1,세]",,http://...,
+4,answer_4,"145.0, 200.9, 163.5, 0.1,cm",,http://...,
+5,answer_5,"35.0, 150.9, 54.5, 0.1,kg",,http://...,
+6,answer_6,"15, 80, 23, 1,세",,http://...,
 7,answer_7,,여자,http://...,
 8,answer_8,,남자,http://...,
 9,answer_9,,논바이너리,http://...,
 10,answer_10,,규칙적,http://...,
 11,answer_11,,불규칙적,http://...,
-12,answer_12,"[20,50,28,1,일]",,http://...,
-13,answer_13,"[1,31,18,1,일]",,http://...,
+12,answer_12,"20,50,28,1,일",,http://...,
+13,answer_13,"1,31,18,1,일",,http://...,
 14,answer_14,,하루 3끼 미만,http://...,
 15,answer_15,,하루 3끼,http://...,
 16,answer_16,,하루 3끼 초과,http://...,
 17,answer_17,,있음,http://...,
 18,answer_18,,없음,http://...,
-19,answer_19,,"땅콩 등 견과류",http://...,
-20,answer_20,,"우유",http://...,
-21,answer_21,,"갑각류와 조개류",http://...,
+19,answer_19,,"땅콩 등 견과류
+",http://...,
+20,answer_20,,"우유
+",http://...,
+21,answer_21,,"갑각류와 조개류
+",http://...,
 22,answer_22,,대두,http://...,
 23,answer_23,,계란,http://...,
 24,answer_24,,생선,http://...,
@@ -45,15 +48,18 @@ INDEX,ANSWER_KEY,ANSWER_VALUE,ANSWER_DESC,ANSWER_IMG_LINK,VERSION
 44,answer_44,,격투기,http://...,
 45,answer_45,,등산,http://...,
 46,answer_46,,수영,http://...,
-47,answer_47,,"거의 앉아있음",http://...,
+47,answer_47,,"거의 앉아있음
+",http://...,
 48,answer_48,,거의 서 있음,http://...,
-49,answer_49,,"조금의 신체 활동",http://...,
+49,answer_49,,"조금의 신체 활동
+",http://...,
 50,answer_50,,활발한 신체 활동,http://...,
 51,answer_51,,5%,http://...,
 52,answer_52,,20%,http://...,
 53,answer_53,,50%,http://...,
 54,answer_54,,80%,http://...,
-55,answer_55,,"얼음물",http://...,
+55,answer_55,,"얼음물
+",http://...,
 56,answer_56,,미온수,http://...,
 57,answer_57,,뜨거운 물,http://...,
 58,answer_58,,5시간 미만,http://...,
@@ -63,7 +69,10 @@ INDEX,ANSWER_KEY,ANSWER_VALUE,ANSWER_DESC,ANSWER_IMG_LINK,VERSION
 62,answer_62,,복부관리,http://...,
 63,answer_63,,하체관리,http://...,
 64,answer_64,,전체관리,http://...,
-65,answer_65,,"호흡이 불편하다.",http://...,
-66,answer_66,,"근육/관절 통증이 있다.",http://...,
-67,answer_67,,"치료중이거나 진단받은 질환이 있다.",http://...,
+65,answer_65,,"호흡이 불편하다.
+",http://...,
+66,answer_66,,"근육/관절 통증이 있다.
+",http://...,
+67,answer_67,,"치료중이거나 진단받은 질환이 있다.
+",http://...,
 68,answer_68,,없음,http://...,
