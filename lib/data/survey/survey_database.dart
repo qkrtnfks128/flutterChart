@@ -90,6 +90,18 @@ class SurveyDatabase extends _$SurveyDatabase {
     await delete(answers).go();
   }
 
+  Future deleteSystemData() async {
+    await delete(systems).go();
+  }
+
+  Future deleteQuestionData() async {
+    await delete(questions).go();
+  }
+
+  Future deleteAnswerData() async {
+    await delete(answers).go();
+  }
+
   @override
   int get schemaVersion => 1;
 }
