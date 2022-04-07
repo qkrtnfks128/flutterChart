@@ -1,5 +1,6 @@
 import 'package:fietmobile/app_settings.dart';
 import 'package:fietmobile/services/login/apple_login_api.dart';
+import 'package:fietmobile/services/login/kakao_login_api.dart';
 import 'package:fietmobile/ui/common/fiet_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +12,6 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         backgroundColor: Color(0xff6B5BE8),
         body: Column(
@@ -23,7 +23,9 @@ class LoginView extends StatelessWidget {
                   "FIET와 함께\n건강한 습관을 만들어 보아요.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: appSettings.isDarkMode ? fietTheme.brand['darkMode'][100] : fietTheme.brand['lightMode'][100],
+                    color: appSettings.isDarkMode
+                        ? fietTheme.brand['darkMode'][100]
+                        : fietTheme.brand['lightMode'][100],
                     fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
                   ),
@@ -31,7 +33,9 @@ class LoginView extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: () {
+                KakaoLoginApi().login();
+              },
               child: Container(
                 width: 342,
                 height: 54,
