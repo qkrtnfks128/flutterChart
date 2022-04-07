@@ -35,7 +35,7 @@ class _$FietUserTearOff {
       int age = 20,
       double height = 0.0,
       double weight = 0.0,
-      Gender gender = Gender.Male,
+      FietGender gender = FietGender.Male,
       ExerciseExpert exerciseExpert = ExerciseExpert.Beginner}) {
     return _FietUser(
       name: name,
@@ -77,7 +77,7 @@ mixin _$FietUser {
   int get age => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
   double get weight => throw _privateConstructorUsedError;
-  Gender get gender => throw _privateConstructorUsedError;
+  FietGender get gender => throw _privateConstructorUsedError;
   ExerciseExpert get exerciseExpert => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -103,7 +103,7 @@ abstract class $FietUserCopyWith<$Res> {
       int age,
       double height,
       double weight,
-      Gender gender,
+      FietGender gender,
       ExerciseExpert exerciseExpert});
 }
 
@@ -184,7 +184,7 @@ class _$FietUserCopyWithImpl<$Res> implements $FietUserCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
+              as FietGender,
       exerciseExpert: exerciseExpert == freezed
           ? _value.exerciseExpert
           : exerciseExpert // ignore: cast_nullable_to_non_nullable
@@ -211,7 +211,7 @@ abstract class _$FietUserCopyWith<$Res> implements $FietUserCopyWith<$Res> {
       int age,
       double height,
       double weight,
-      Gender gender,
+      FietGender gender,
       ExerciseExpert exerciseExpert});
 }
 
@@ -293,7 +293,7 @@ class __$FietUserCopyWithImpl<$Res> extends _$FietUserCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Gender,
+              as FietGender,
       exerciseExpert: exerciseExpert == freezed
           ? _value.exerciseExpert
           : exerciseExpert // ignore: cast_nullable_to_non_nullable
@@ -318,7 +318,7 @@ class _$_FietUser implements _FietUser {
       this.age = 20,
       this.height = 0.0,
       this.weight = 0.0,
-      this.gender = Gender.Male,
+      this.gender = FietGender.Male,
       this.exerciseExpert = ExerciseExpert.Beginner});
 
   factory _$_FietUser.fromJson(Map<String, dynamic> json) =>
@@ -362,7 +362,7 @@ class _$_FietUser implements _FietUser {
   final double weight;
   @JsonKey()
   @override
-  final Gender gender;
+  final FietGender gender;
   @JsonKey()
   @override
   final ExerciseExpert exerciseExpert;
@@ -439,7 +439,7 @@ abstract class _FietUser implements FietUser {
       int age,
       double height,
       double weight,
-      Gender gender,
+      FietGender gender,
       ExerciseExpert exerciseExpert}) = _$_FietUser;
 
   factory _FietUser.fromJson(Map<String, dynamic> json) = _$_FietUser.fromJson;
@@ -469,7 +469,7 @@ abstract class _FietUser implements FietUser {
   @override
   double get weight;
   @override
-  Gender get gender;
+  FietGender get gender;
   @override
   ExerciseExpert get exerciseExpert;
   @override

@@ -1,4 +1,6 @@
+import 'package:fietmobile/models/user/fiet_user.dart';
 import 'package:fietmobile/services/login/login_api.dart';
+import 'package:fietmobile/services/login/user_manager.dart';
 import 'package:flutter/services.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'package:cloud_functions/cloud_functions.dart';
@@ -39,9 +41,8 @@ class KakaoLoginApi implements LoginApi {
       }
     }
 
-    _createFirebaseUser(token);
-
-    var userData = await UserApi.instance.me();
+    await _createFirebaseUser(token);
+    await _saveUserData();
   }
 
   @override
@@ -57,17 +58,28 @@ class KakaoLoginApi implements LoginApi {
 
   // 카카오 토큰을 Firebase Cloud Functions 측으로 전송
   _createFirebaseUser(OAuthToken token) async {
-    // String url =
-    //     'https://us-central1-fiet-test-app.cloudfunctions.net/getFirebaseToken';
-    // await http
-    //     .post(Uri.parse(url), headers: {'access_token': token.accessToken});
-    // var response = await http.get(Uri.parse(url));
-
     HttpsCallable getFirebaseToken =
         FirebaseFunctions.instance.httpsCallable('getFirebaseToken');
     final response = await getFirebaseToken.call(<String, dynamic>{
       'access_token': token.accessToken,
     }).catchError((e) => print(e));
-    print('로그인 결과: ${response.data}');
+    print('카카오 로그인 결과: ${response.data}');
+  }
+
+  _saveUserData() async {
+    var userData = await UserApi.instance.me();
+
+    Gender? kakaoGender = userData.kakaoAccount?.gender;
+    FietGender gender = kakaoGender == Gender.male
+        ? FietGender.Male
+        : (kakaoGender == Gender.female
+            ? FietGender.Female
+            : FietGender.Bigender);
+
+    UserManager.user = FietUser(
+      name: userData.kakaoAccount?.name ?? '',
+      email: userData.kakaoAccount?.email ?? '',
+      gender: gender,
+    );
   }
 }

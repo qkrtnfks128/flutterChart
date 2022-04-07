@@ -4,7 +4,7 @@ part 'fiet_user.freezed.dart';
 
 part 'fiet_user.g.dart';
 
-enum Gender {
+enum FietGender {
   @JsonValue("male")
   Male,
   @JsonValue("female")
@@ -35,7 +35,7 @@ class FietUser with _$FietUser {
     @Default(20) int age,
     @Default(0.0) double height,
     @Default(0.0) double weight,
-    @Default(Gender.Male) Gender gender,
+    @Default(FietGender.Male) FietGender gender,
     @Default(ExerciseExpert.Beginner) ExerciseExpert exerciseExpert,
   }) = _FietUser;
 

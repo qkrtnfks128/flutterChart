@@ -19,8 +19,8 @@ _$_FietUser _$$_FietUserFromJson(Map<String, dynamic> json) => _$_FietUser(
       age: json['age'] as int? ?? 20,
       height: (json['height'] as num?)?.toDouble() ?? 0.0,
       weight: (json['weight'] as num?)?.toDouble() ?? 0.0,
-      gender:
-          $enumDecodeNullable(_$GenderEnumMap, json['gender']) ?? Gender.Male,
+      gender: $enumDecodeNullable(_$GenderEnumMap, json['gender']) ??
+          FietGender.Male,
       exerciseExpert: $enumDecodeNullable(
               _$ExerciseExpertEnumMap, json['exerciseExpert']) ??
           ExerciseExpert.Beginner,
@@ -45,9 +45,9 @@ Map<String, dynamic> _$$_FietUserToJson(_$_FietUser instance) =>
     };
 
 const _$GenderEnumMap = {
-  Gender.Male: 'male',
-  Gender.Female: 'female',
-  Gender.Bigender: 'bigender',
+  FietGender.Male: 'male',
+  FietGender.Female: 'female',
+  FietGender.Bigender: 'bigender',
 };
 
 const _$ExerciseExpertEnumMap = {
