@@ -67,9 +67,14 @@ class KakaoLoginApi implements LoginApi {
   }
 
   _saveUserData() async {
-    var userData = await UserApi.instance.me();
+    User? kakaoUserData;
+    try {
+      kakaoUserData = await UserApi.instance.me();
+    } catch (e) {
+      return;
+    }
 
-    Gender? kakaoGender = userData.kakaoAccount?.gender;
+    Gender? kakaoGender = kakaoUserData.kakaoAccount?.gender;
     FietGender gender = kakaoGender == Gender.male
         ? FietGender.Male
         : (kakaoGender == Gender.female
@@ -77,8 +82,8 @@ class KakaoLoginApi implements LoginApi {
             : FietGender.Bigender);
 
     UserManager.user = FietUser(
-      name: userData.kakaoAccount?.name ?? '',
-      email: userData.kakaoAccount?.email ?? '',
+      name: kakaoUserData.kakaoAccount?.name ?? '',
+      email: kakaoUserData.kakaoAccount?.email ?? '',
       gender: gender,
     );
   }
