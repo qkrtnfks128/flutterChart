@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "860289787956",
+    "project_id": "fiet-test-app",
+    "storage_bucket": "fiet-test-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860289787956:android:393e6453132049ef844261",
+        "android_client_info": {
+          "package_name": "tech.fiet.routine.fietmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860289787956-drt6mnti2a09ir201pbmpre27djbf7ug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.fiet.routine.fietmobile",
+            "certificate_hash": "a9f26c8dde32bb3785ababf2aaa9caf484a167ec"
+          }
+        },
+        {
+          "client_id": "860289787956-h2nsoqi1magmlpfa1m56fvrtka6v3asg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXLOXLS8bgaqxP0LkltCPzAK97HnFQUuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860289787956-h2nsoqi1magmlpfa1m56fvrtka6v3asg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "860289787956-ph2lscjvibkr6g4bofsj4uhtunil8jqg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tech.fiet.routine.fietmobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

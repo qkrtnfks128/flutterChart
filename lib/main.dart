@@ -1,8 +1,14 @@
 import 'package:fietmobile/routes.dart';
+import 'package:fietmobile/ui/common/fiet_theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  KakaoSdk.init(nativeAppKey: 'a4e49770bf916cc2ec223321723f111a');
   runApp(const MyApp());
 }
 
@@ -28,6 +34,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
               primarySwatch: Colors.blue,
               appBarTheme: const AppBarTheme(backgroundColor:Colors.white ,elevation: 0, titleTextStyle:TextStyle(color:Colors.black,fontSize:14) ),//공통앱바
+
               scaffoldBackgroundColor:  Colors.white//공통배경색
           ),
           initialRoute: '/',
