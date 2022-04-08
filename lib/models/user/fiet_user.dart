@@ -23,6 +23,7 @@ enum ExerciseExpert {
 @freezed
 class FietUser with _$FietUser {
   factory FietUser({
+    @Default("") String uuid,
     @Default("") String name,
     @Default("") String email,
     @Default("") String nationCode,
