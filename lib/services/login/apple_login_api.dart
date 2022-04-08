@@ -6,12 +6,10 @@ class AppleLoginApi implements LoginApi {
   @override
   Future login() async {
     // TODO: implement login
-    final appleCredential = await SignInWithApple.getAppleIDCredential(
-      scopes: [
-        AppleIDAuthorizationScopes.email,
-        AppleIDAuthorizationScopes.fullName,
-      ]
-    );
+    final appleCredential = await SignInWithApple.getAppleIDCredential(scopes: [
+      AppleIDAuthorizationScopes.email,
+      AppleIDAuthorizationScopes.fullName,
+    ]);
 
     print(appleCredential.identityToken!.toString());
 
@@ -20,7 +18,6 @@ class AppleLoginApi implements LoginApi {
       accessToken: appleCredential.authorizationCode,
     );
     return await FirebaseAuth.instance.signInWithCredential(oauthCredential);
-
   }
 
   @override
