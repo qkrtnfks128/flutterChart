@@ -7,6 +7,7 @@ part of 'fiet_user.dart';
 // **************************************************************************
 
 _$_FietUser _$$_FietUserFromJson(Map<String, dynamic> json) => _$_FietUser(
+      uuid: json['uuid'] as String? ?? "",
       name: json['name'] as String? ?? "",
       email: json['email'] as String? ?? "",
       nationCode: json['nationCode'] as String? ?? "",
@@ -28,6 +29,7 @@ _$_FietUser _$$_FietUserFromJson(Map<String, dynamic> json) => _$_FietUser(
 
 Map<String, dynamic> _$$_FietUserToJson(_$_FietUser instance) =>
     <String, dynamic>{
+      'uuid': instance.uuid,
       'name': instance.name,
       'email': instance.email,
       'nationCode': instance.nationCode,

@@ -23,7 +23,8 @@ class _$FietUserTearOff {
   const _$FietUserTearOff();
 
   _FietUser call(
-      {String name = "",
+      {String uuid = "",
+      String name = "",
       String email = "",
       String nationCode = "",
       String langCode = "",
@@ -38,6 +39,7 @@ class _$FietUserTearOff {
       Gender gender = Gender.Male,
       ExerciseExpert exerciseExpert = ExerciseExpert.Beginner}) {
     return _FietUser(
+      uuid: uuid,
       name: name,
       email: email,
       nationCode: nationCode,
@@ -65,6 +67,7 @@ const $FietUser = _$FietUserTearOff();
 
 /// @nodoc
 mixin _$FietUser {
+  String get uuid => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get email => throw _privateConstructorUsedError;
   String get nationCode => throw _privateConstructorUsedError;
@@ -91,7 +94,8 @@ abstract class $FietUserCopyWith<$Res> {
   factory $FietUserCopyWith(FietUser value, $Res Function(FietUser) then) =
       _$FietUserCopyWithImpl<$Res>;
   $Res call(
-      {String name,
+      {String uuid,
+      String name,
       String email,
       String nationCode,
       String langCode,
@@ -117,6 +121,7 @@ class _$FietUserCopyWithImpl<$Res> implements $FietUserCopyWith<$Res> {
 
   @override
   $Res call({
+    Object? uuid = freezed,
     Object? name = freezed,
     Object? email = freezed,
     Object? nationCode = freezed,
@@ -133,6 +138,10 @@ class _$FietUserCopyWithImpl<$Res> implements $FietUserCopyWith<$Res> {
     Object? exerciseExpert = freezed,
   }) {
     return _then(_value.copyWith(
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -199,7 +208,8 @@ abstract class _$FietUserCopyWith<$Res> implements $FietUserCopyWith<$Res> {
       __$FietUserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String name,
+      {String uuid,
+      String name,
       String email,
       String nationCode,
       String langCode,
@@ -226,6 +236,7 @@ class __$FietUserCopyWithImpl<$Res> extends _$FietUserCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? uuid = freezed,
     Object? name = freezed,
     Object? email = freezed,
     Object? nationCode = freezed,
@@ -242,6 +253,10 @@ class __$FietUserCopyWithImpl<$Res> extends _$FietUserCopyWithImpl<$Res>
     Object? exerciseExpert = freezed,
   }) {
     return _then(_FietUser(
+      uuid: uuid == freezed
+          ? _value.uuid
+          : uuid // ignore: cast_nullable_to_non_nullable
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -306,7 +321,8 @@ class __$FietUserCopyWithImpl<$Res> extends _$FietUserCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FietUser implements _FietUser {
   _$_FietUser(
-      {this.name = "",
+      {this.uuid = "",
+      this.name = "",
       this.email = "",
       this.nationCode = "",
       this.langCode = "",
@@ -324,6 +340,9 @@ class _$_FietUser implements _FietUser {
   factory _$_FietUser.fromJson(Map<String, dynamic> json) =>
       _$$_FietUserFromJson(json);
 
+  @JsonKey()
+  @override
+  final String uuid;
   @JsonKey()
   @override
   final String name;
@@ -369,7 +388,7 @@ class _$_FietUser implements _FietUser {
 
   @override
   String toString() {
-    return 'FietUser(name: $name, email: $email, nationCode: $nationCode, langCode: $langCode, timezone: $timezone, osType: $osType, osVersion: $osVersion, manufacturer: $manufacturer, model: $model, age: $age, height: $height, weight: $weight, gender: $gender, exerciseExpert: $exerciseExpert)';
+    return 'FietUser(uuid: $uuid, name: $name, email: $email, nationCode: $nationCode, langCode: $langCode, timezone: $timezone, osType: $osType, osVersion: $osVersion, manufacturer: $manufacturer, model: $model, age: $age, height: $height, weight: $weight, gender: $gender, exerciseExpert: $exerciseExpert)';
   }
 
   @override
@@ -377,6 +396,7 @@ class _$_FietUser implements _FietUser {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FietUser &&
+            const DeepCollectionEquality().equals(other.uuid, uuid) &&
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.email, email) &&
             const DeepCollectionEquality()
@@ -399,6 +419,7 @@ class _$_FietUser implements _FietUser {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      const DeepCollectionEquality().hash(uuid),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(email),
       const DeepCollectionEquality().hash(nationCode),
@@ -427,7 +448,8 @@ class _$_FietUser implements _FietUser {
 
 abstract class _FietUser implements FietUser {
   factory _FietUser(
-      {String name,
+      {String uuid,
+      String name,
       String email,
       String nationCode,
       String langCode,
@@ -444,6 +466,8 @@ abstract class _FietUser implements FietUser {
 
   factory _FietUser.fromJson(Map<String, dynamic> json) = _$_FietUser.fromJson;
 
+  @override
+  String get uuid;
   @override
   String get name;
   @override
