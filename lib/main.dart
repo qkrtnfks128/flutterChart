@@ -8,7 +8,7 @@ import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  KakaoSdk.init(nativeAppKey: 'a4e49770bf916cc2ec223321723f111a');
+  KakaoSdk.init(nativeAppKey: '397f8573a033f20def764225f7bb1627');
   runApp(const MyApp());
 }
 
