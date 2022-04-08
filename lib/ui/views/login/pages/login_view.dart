@@ -1,4 +1,5 @@
 import 'package:fietmobile/app_settings.dart';
+import 'package:fietmobile/services/login/apple_login_api.dart';
 import 'package:fietmobile/ui/common/fiet_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +42,10 @@ class LoginView extends StatelessWidget {
               height: 10,
             ),
             GestureDetector(
-              onTap: (){},
+              onTap: () async {
+                AppleLoginApi apple = AppleLoginApi();
+                await apple.login();
+              },
               child: Container(
                 width: 342,
                 height: 54,

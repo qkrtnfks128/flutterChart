@@ -1,4 +1,4 @@
-package tech.fiet.routine.fietmobile;
+package tech.fiet.routine.mobile;
 
 import io.flutter.embedding.android.FlutterActivity;
 
