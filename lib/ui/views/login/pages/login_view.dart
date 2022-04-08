@@ -23,9 +23,10 @@ class LoginView extends StatelessWidget {
                   "FIET와 함께\n건강한 습관을 만들어 보아요.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: appSettings.isDarkMode
-                        ? fietTheme.brand['darkMode'][100]
-                        : fietTheme.brand['lightMode'][100],
+                    // fiet_theme.dart 파일의 fietTheme 객체가 제거되어 임시로 주석처리 합니다.
+                    // color: appSettings.isDarkMode
+                    //     ? fietTheme.brand['darkMode'][100]
+                    //     : fietTheme.brand['lightMode'][100],
                     fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
                   ),
