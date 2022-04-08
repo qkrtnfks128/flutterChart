@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="tech.fiet.routine.fietmobile">
+    package="tech.fiet.routine.mobile">
    <application
         android:label="fietmobile"
         android:name="${applicationName}"

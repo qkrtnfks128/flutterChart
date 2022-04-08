@@ -4,7 +4,7 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class AppleLoginApi implements LoginApi {
   @override
-  void login() async {
+  Future login() async {
     // TODO: implement login
     final appleCredential = await SignInWithApple.getAppleIDCredential(
       scopes: [
@@ -13,17 +13,19 @@ class AppleLoginApi implements LoginApi {
       ]
     );
 
+    print(appleCredential.identityToken!.toString());
+
     final oauthCredential = OAuthProvider("apple.com").credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
     );
+    return await FirebaseAuth.instance.signInWithCredential(oauthCredential);
 
-    await FirebaseAuth.instance.signInWithCredential(oauthCredential);
   }
 
   @override
-  void logout() async {
+  Future logout() async {
     // TODO: implement logout
-    await FirebaseAuth.instance.signOut();
+    return await FirebaseAuth.instance.signOut();
   }
 }

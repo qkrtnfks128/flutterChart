@@ -1,48 +1,48 @@
 {
   "project_info": {
-    "project_number": "860289787956",
-    "project_id": "fiet-test-app",
-    "storage_bucket": "fiet-test-app.appspot.com"
+    "project_number": "229366378420",
+    "project_id": "fietmobile",
+    "storage_bucket": "fietmobile.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:860289787956:android:393e6453132049ef844261",
+        "mobilesdk_app_id": "1:229366378420:android:8b8c067c5d1e84df95cce1",
         "android_client_info": {
-          "package_name": "tech.fiet.routine.fietmobile"
+          "package_name": "tech.fiet.routine.mobile"
         }
       },
       "oauth_client": [
         {
-          "client_id": "860289787956-drt6mnti2a09ir201pbmpre27djbf7ug.apps.googleusercontent.com",
+          "client_id": "229366378420-4ncivvugvlnnccaa1i1ivair07f5d3et.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "tech.fiet.routine.fietmobile",
+            "package_name": "tech.fiet.routine.mobile",
             "certificate_hash": "a9f26c8dde32bb3785ababf2aaa9caf484a167ec"
           }
         },
         {
-          "client_id": "860289787956-h2nsoqi1magmlpfa1m56fvrtka6v3asg.apps.googleusercontent.com",
+          "client_id": "229366378420-2ka9mdm1puetti46oafa1sk062tg4n7n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXLOXLS8bgaqxP0LkltCPzAK97HnFQUuw"
+          "current_key": "AIzaSyDMVSAiZGp5ci-Sw0uo_rTTdQe5VdvM8Kg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "860289787956-h2nsoqi1magmlpfa1m56fvrtka6v3asg.apps.googleusercontent.com",
+              "client_id": "229366378420-2ka9mdm1puetti46oafa1sk062tg4n7n.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "860289787956-ph2lscjvibkr6g4bofsj4uhtunil8jqg.apps.googleusercontent.com",
+              "client_id": "229366378420-hkecfncg42ba19gnjir411v28s85mcn3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "tech.fiet.routine.fietmobile"
+                "bundle_id": "tech.fiet.routine.mobile"
               }
             }
           ]

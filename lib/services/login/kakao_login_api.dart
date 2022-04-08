@@ -6,11 +6,11 @@ import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 
 class KakaoLoginApi implements LoginApi {
   @override
-  void login() async {
+  Future login() async {
     // TODO: implement login
     if(await isKakaoTalkInstalled()) {
       try {
-        await UserApi.instance.loginWithKakaoTalk();
+        return await UserApi.instance.loginWithKakaoTalk();
         print('로그인 성공');
       }catch(error){
         print('카카오톡 로그인 실패 $error');
@@ -22,14 +22,14 @@ class KakaoLoginApi implements LoginApi {
         }
 
         try {
-          await UserApi.instance.loginWithKakaoAccount();
+          return await UserApi.instance.loginWithKakaoAccount();
         } catch(error) {
           print('카카오 계정으로 로그인 실패 $error');
         }
       }
     } else {
       try {
-        await UserApi.instance.loginWithKakaoAccount();
+        return await UserApi.instance.loginWithKakaoAccount();
         print('카카오계정으로 로그인 성공');
       } catch(error) {
         print('카카오계정으로 로그인 실패 $error');
@@ -38,11 +38,11 @@ class KakaoLoginApi implements LoginApi {
   }
 
   @override
-  void logout() async {
+  Future logout() async {
     // TODO: implement logout
     try {
-      await UserApi.instance.logout();
       print('로그아웃 성공, SDK에서 토큰 삭제');
+      return await UserApi.instance.logout();
     } catch(error) {
       print('로그아웃 실패, SDK에서 토큰 삭제 $error');
     }

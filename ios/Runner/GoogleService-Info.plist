@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>860289787956-ph2lscjvibkr6g4bofsj4uhtunil8jqg.apps.googleusercontent.com</string>
+	<string>229366378420-hkecfncg42ba19gnjir411v28s85mcn3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.860289787956-ph2lscjvibkr6g4bofsj4uhtunil8jqg</string>
+	<string>com.googleusercontent.apps.229366378420-hkecfncg42ba19gnjir411v28s85mcn3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDxtSlsQIb-70giCgmcSZVUOCqJUSiVTqo</string>
+	<string>AIzaSyCtz11yvLziiyw4o7bT6WfNpCxD6AR6X0Q</string>
 	<key>GCM_SENDER_ID</key>
-	<string>860289787956</string>
+	<string>229366378420</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>tech.fiet.routine.fietmobile</string>
+	<string>tech.fiet.routine.mobile</string>
 	<key>PROJECT_ID</key>
-	<string>fiet-test-app</string>
+	<string>fietmobile</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fiet-test-app.appspot.com</string>
+	<string>fietmobile.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:860289787956:ios:c8be3bcc66c3a89c844261</string>
+	<string>1:229366378420:ios:bbd6cf48babdf47d95cce1</string>
 </dict>
 </plist>
