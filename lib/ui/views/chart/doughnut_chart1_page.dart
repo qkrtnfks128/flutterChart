@@ -9,7 +9,7 @@ class DoughnutChart1Page extends StatefulWidget {
 }
 
 class _DoughnutChart1PageState extends State<DoughnutChart1Page> {
-   bool choiceNum =true;
+
   @override
   Widget build(BuildContext context) {
     final List<_ChartData> chartData = [

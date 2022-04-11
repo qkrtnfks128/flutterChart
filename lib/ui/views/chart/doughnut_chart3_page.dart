@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class DoughnutChart2Page extends StatefulWidget {
-  const DoughnutChart2Page({Key? key}) : super(key: key);
+class DoughnutChart3Page extends StatefulWidget {
+  const DoughnutChart3Page({Key? key}) : super(key: key);
 
   @override
-  State<DoughnutChart2Page> createState() => _DoughnutChart2PageState();
+  State<DoughnutChart3Page> createState() => _DoughnutChart3PageState();
 }
 
-class _DoughnutChart2PageState extends State<DoughnutChart2Page> {
+class _DoughnutChart3PageState extends State<DoughnutChart3Page> {
 
   @override
   Widget build(BuildContext context) {
@@ -31,21 +31,34 @@ class _DoughnutChart2PageState extends State<DoughnutChart2Page> {
                 Navigator.pop(context);
               },
             ),
-            title: Text('도넛-2'),
+            title: Text('도넛-3'),
             centerTitle: true,
           ),
         body:SfCircularChart(
+            annotations: <CircularChartAnnotation>[
+              CircularChartAnnotation(
+                  width:'100%',height:'100%',
+                  widget: Container(
+                      child: PhysicalModel(
+                          child: Container(),
+                          shape: BoxShape.circle,
+                          elevation: 10,
+                          shadowColor: Colors.black,
+                          color: const Color.fromRGBO(255, 255, 255, 1)))),
+              CircularChartAnnotation(
+                  widget: Container(
+                      child: const Text('62%',
+                          style: TextStyle(
+                              color: Color.fromRGBO(0, 0, 0, 0.5), fontSize: 25))))
+            ],
             series: <CircularSeries>[
               DoughnutSeries<_ChartData, String>(
                   dataSource: chartData,
                   xValueMapper: (_ChartData data, _) => data.x,
                   yValueMapper: (_ChartData data, _) => data.y,
                   pointColorMapper:(_ChartData data,  _) => data.color,
-                  // Starting angle of doughnut
-                  startAngle: 270,
-                  // Ending angle of doughnut
-                  endAngle: 90,
-                  animationDuration: 1000
+                  radius: '100%',
+                animationDuration: 1000
               )
             ]
         )
