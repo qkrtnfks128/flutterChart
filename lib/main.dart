@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
 
             scaffoldBackgroundColor: Colors.white //공통배경색
             ),
-        initialRoute: '/',
+        initialRoute: '/chart',
         routes: routes,
       ),
     );

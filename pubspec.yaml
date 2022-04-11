@@ -52,6 +52,7 @@ dependencies:
   firebase_core:
   firebase_auth:
   cloud_functions:
+  syncfusion_flutter_charts:
 
 
 
@@ -81,7 +82,6 @@ flutter:
   assets:
     - assets/
     - assets/icons/
-    - assets/csv/
     - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
