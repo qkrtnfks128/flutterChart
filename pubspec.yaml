@@ -52,7 +52,6 @@ dependencies:
   firebase_core:
   firebase_auth:
   cloud_functions:
-  syncfusion_flutter_charts:
   pie_chart: ^5.3.0
   graphic:
 

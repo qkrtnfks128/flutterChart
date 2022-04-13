@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import './doughnut_chart1_page.dart';
-import './doughnut_chart2_page.dart';
+import './custom_pie_page.dart';
+import './test_page.dart';
+import './donut_chart1_page.dart';
 
-import './doughnut_chart3_page.dart';
-import './doughnut_chart4_page.dart';
 import './bar_chart1_page.dart';
 
 class ChartPage extends StatefulWidget {
@@ -31,12 +30,10 @@ class _ChartPageState extends State<ChartPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ButtonWidget(text:'도넛차트1',route:DoughnutChart1Page()),
-                ButtonWidget(text:'반도넛차트',route:DoughnutChart2Page() ),
-                ButtonWidget(text:'중간글자도넛차트',route:DoughnutChart3Page()),
-
-                ButtonWidget(text:'커스텀도넛',route:DoughnutChart4Page()),
+                ButtonWidget(text:'커스텀도넛',route:CustomPiePage()),
                 ButtonWidget(text:'바차트',route:BarChart1Page()),
+                ButtonWidget(text:'테스트',route:Test()),
+                ButtonWidget(text:'가운데글자도넛',route:DonutChart1Page()),
               ],
             ),
           ),
