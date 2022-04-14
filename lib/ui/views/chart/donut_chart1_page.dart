@@ -1,18 +1,38 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:pie_chart/pie_chart.dart';
 import 'dart:math';
-import 'package:flutter_svg/svg.dart';
 
 class DonutChart1Page extends StatefulWidget {
   @override
   State<DonutChart1Page> createState() => _DonutChart1PageState();
 }
 
-class _DonutChart1PageState extends State<DonutChart1Page> {
+class _DonutChart1PageState extends State<DonutChart1Page> with TickerProviderStateMixin {
+  double percentage = 0.0;
+  double newPercentage = 0.0;
+
+  late AnimationController percentageAnimationController;
 
   @override
   void initState() {
     super.initState();
+
+    percentageAnimationController =  AnimationController(
+        vsync: this,
+        duration: const Duration(milliseconds:2000)
+    )
+      ..addListener((){
+        setState(() {
+          
+          percentage=lerpDouble(percentage,newPercentage,percentageAnimationController.value)!;
+        });
+      });
+
+      setState(() {
+        percentage = newPercentage;
+        newPercentage=0.5;
+        percentageAnimationController.forward();
+      });
   }
 
   @override
@@ -33,15 +53,32 @@ class _DonutChart1PageState extends State<DonutChart1Page> {
           centerTitle: true,
         ),
         body: Center(
-          child:ActiveBorder(percent: 0.6, color: Colors.lightBlue),
+          child:Column(
+            children: [
+              PercentDonut(percent: percentage, color: Colors.lightBlue),
+              TextButton(onPressed: (){
+                setState(() {
+                  print('5퍼 추가');
+                  print(newPercentage);
+                  print(percentage);
+                  newPercentage+=0.05;
+                  print(newPercentage);
+                  print(percentage);
+                  percentageAnimationController.forward();
+                  // percentage = newPercentage;
+
+                });
+              }, child: Text('5퍼증가'))
+            ],
+          ),
         ),
       ),
     );
   }
 }
 //floating border
-class ActiveBorder extends StatelessWidget {
-  const ActiveBorder({Key? key, required this.percent, required this.color})
+class PercentDonut extends StatelessWidget {
+  const PercentDonut({Key? key, required this.percent, required this.color})
       : super(key: key);
   final percent;
   final color;
@@ -53,7 +90,7 @@ class ActiveBorder extends StatelessWidget {
       height: 310,
       child: CustomPaint(
         // CustomPaint를 그리고 이 안에 차트를 그려줍니다..
-        painter: ActiveBorderPaint(
+        painter: PercentDonutPaint(
           percentage: percent, // 파이 차트가 얼마나 칠해져 있는지 정하는 변수입니다.
           activeColor: color, //색
         ),
@@ -63,11 +100,11 @@ class ActiveBorder extends StatelessWidget {
 }
 
 ////////
-class ActiveBorderPaint extends CustomPainter {
+class PercentDonutPaint extends CustomPainter {
   double percentage;
   double textScaleFactor = 1.0; // 파이 차트에 들어갈 텍스트 크기를 정합니다.
   Color activeColor;
-  ActiveBorderPaint({required this.percentage, required this.activeColor});
+  PercentDonutPaint({required this.percentage, required this.activeColor});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -119,7 +156,7 @@ class ActiveBorderPaint extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(ActiveBorderPaint oldDelegate) {
+  bool shouldRepaint(PercentDonutPaint oldDelegate) {
     return true;
   }
 }
